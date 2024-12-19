@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator - Performance Evaluation Creator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styling/style2.css" media="screen">
+    <link rel="stylesheet" href="styling/print.css" media="print">
+
+    <script src="script.js"></script>
+
+
+</head>
+
+<body onload="fillCharts()">
+
+    
+    <div class="top-bar">
+        <button onclick="printDiv();">
+            <span class="material-symbols-outlined">
+                print
+            </span>
+        </button>
+    </div>
+    <div class="container" id = "container">
+
+
+        <div class="performance-eval" id = "1">
+            <div class="content">
+                <div class="cell" id="name">
+                    <div class="row" id = "name-row"></div>
+                </div>
+                <div class="cell" id="year">
+                    <div class="row" id = "year-row"></div>
+                </div>
+                <div class="cell" id="graph-items">
+                    <div class="row" id="current-courses"></div>
+                    <div class="row" id="current-courses-3yr"></div>
+                    <div class="row" id="salary-grants"></div>
+                    <div class="row" id="salary-grants-3yr"></div>
+                </div>
+                <div class="cell" id="advisor">
+                    <div class="row" id = "advisor-row"></div>
+                </div>
+                <div class="cell" id="mentor">
+                    <div class="row" id="undergrad"></div>
+                    <div class="row" id="grad-pi"></div>
+                    <div class="row" id="grad-com"></div>
+                    <div class="row" id="post-doc"></div>
+                    <div class="row" id="faculty"></div>
+                </div>
+                <div class="cell" id="input1">
+                    <div class="row" id="val1"></div>
+                    <div class="row" id="val2"></div>
+                </div>
+                <div class="cell" id="input2">
+                    <div class="row" id="val3"></div>
+                    <div class="row" id="val4"></div>
+                </div>
+                <div class="cell" id="output1">
+                    <div class="row" id="papers"></div>
+                    <div class="row" id="presentations"></div>
+                </div>
+                <div class="cell" id="output2">
+                    <div class="row" id="patents"></div>
+                    <div class="row" id="licenses"></div>
+                    <div class="row" id="new-co"></div>
+                    <div class="row" id="products"></div>
+                </div>
+                <div class="cell" id="leadership">
+                    <div class="row" id="BME"></div>
+                    <div class="row" id="SOM-SEAS"></div>
+                    <div class="row" id="Uni"></div>
+                    <div class="row" id="Nat-Int"></div>
+                </div>
+                <div    class="cell" id="passion">
+                    <div class="row" id = "passion-row"></div>
+                </div>
+            </div>
+            <img src="images/Template-FacultyEval.png" alt="Faculty Evaluation"></img>
+        </div>
+    </div>
+</body>
+</html>
