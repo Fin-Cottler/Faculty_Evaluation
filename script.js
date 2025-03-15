@@ -128,11 +128,23 @@ function addEval(){
 
     const row14 = document.createElement("div");
     row14.className = "row";
-    row14.id = "papers";
+    row14.id = "peer-reviewed-paper";
 
-    const row15 = document.createElement("div");
-    row15.className = "row";
-    row15.id = "presentations";
+    const row1401 = document.createElement("div");
+    row1401.className = "row";
+    row1401.id = "seminars";
+
+    const row1402 = document.createElement("div");
+    row1402.className = "row";
+    row1402.id = "conference-pres";
+
+    const row1403 = document.createElement("div");
+    row1403.className = "row";
+    row1403.id = "software";
+
+    const row1404 = document.createElement("div");
+    row1404.className = "row";
+    row1404.id = "prov-pat";
 
     const row16 = document.createElement("div");
     row16.className = "row";
@@ -149,6 +161,10 @@ function addEval(){
     const row19 = document.createElement("div");
     row19.className = "row";
     row19.id = "products";
+
+    const row1901 = document.createElement("div");
+    row1901.className = "row";
+    row1901.id = "other";
 
     const row20 = document.createElement("div");
     row20.className = "row";
@@ -213,12 +229,16 @@ function addEval(){
     cell7.appendChild(row13);
 
     cell8.appendChild(row14);
-    cell8.appendChild(row15);
+    cell8.appendChild(row1401);
+    cell8.appendChild(row1402);
+    cell8.appendChild(row1403);
+    cell8.appendChild(row1404);
 
     cell9.appendChild(row16);
     cell9.appendChild(row17);
     cell9.appendChild(row18);
     cell9.appendChild(row19);
+    cell9.appendChild(row1901);
 
     cell10.appendChild(row20);
     cell10.appendChild(row21);
@@ -260,23 +280,27 @@ function addEval(){
 function fillCharts(){
     const csv = JSON.parse(sessionStorage.getItem('array'));
     
-    
 
     for(let i = 0; i<csv.length - 1; i++){
         addEval();
     }
 
+
+
     for(let i = 0; i<csv.length; i++){
         //get page
         const page = document.getElementById(csv[i].Id);
-        
+        console.log(page)
         //get content element from page
         const content = page.children
         //get all cell elements from content
+        
         const cells = content[0].children
+        
         //all row elements 
         const allRows = [];
-
+        
+        console.log(allRows)
         //for each cell
         for (let f = 0; f < cells.length; f++){
         //each row in cell
@@ -287,6 +311,8 @@ function fillCharts(){
             }
             
         }
+        console.log(allRows)
+
         
         for(let f = 1; f<allRows.length+ 1; f++){
             allRows[f-1].innerHTML = Object.values(csv[i])[f];
