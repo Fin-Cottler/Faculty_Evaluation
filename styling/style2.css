@@ -156,7 +156,8 @@ img{
 
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5%;
 }
 
 #output2 {
@@ -167,7 +168,7 @@ img{
 
 
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 5%;
 }
 
